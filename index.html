@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+
+
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Joining Meeting</title>
+</head>
+<body>
+   
+<div class="meeting-form-area">
+    <div class="tabs">
+        <div class="add-to-select"> 
+    <select   id="dropdown">
+        <option value="en">En</option>
+      <option  value="fr">Fr</option>
+      <option  value="es">Es</option>
+      <option  value="de">De</option>
+      <option  value="po">Po</option> 
+  </select>
+        </div>
+<div class="add-to-canlendar"> <img src="calendar.png"></div>
+<div class="add-to-rec"> 
+<div class="recording">
+<!-- <div class="recording"><img class="recordings" src="recording.png"></div> -->
+
+
+<div class="rec-background">
+    <div class="rec-border">
+        <div class="rec-background-white">
+           <p class="rec">REC</p> 
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+</div>
+<div class="tps">
+
+
+
+
+</div>
+<div class="form-inner">
+<form action="#">
+<div class="field ">
+<span class="fas fa-user"> </span>
+<input class="inp" type="text" placeholder="Username">
+</div>
+<div class="field space">
+    <span class="fas fa-envelope"> </span>
+    <input class="inp" type="email" placeholder="Email">
+    </div>
+    
+    <div class="field space">
+        <span class="fas fa-lock"> </span>
+          <input class="inp" type="password" name="password" id="password" placeholder="Password">
+        <span class="far fa-eye" id="togglePassword"></span>
+    </div>
+    <div class="check">
+    <input type="checkbox" value="lsRememberMe" id="rememberMe"> <label for="rememberMe">Remember me</label>
+</div>
+  </form>
+        <!-- <div class="field space"> -->
+        </div>
+            <!-- <input type="submit" value="Join via Web"> -->
+
+<div class="via_app">
+    <div id="tpts"> <span class="sms"> Join via Web</span></div>
+    <div id="tpts"> <span class="sms" > Join via App</span></div>
+
+
+</div>
+</form>
+</div>
+
+    </div>
+
+</div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+<script>
+    
+    const togglePassword = document.querySelector('#togglePassword');
+        const password = document.querySelector('#password');
+        togglePassword.addEventListener('click', function (e) {
+            // toggle the type attribute
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            // toggle the eye slash icon
+            this.classList.toggle('fa-eye-slash');
+        });
+
+
+
+
+$(function(){
+    $('#dropdown').hover(function() {
+        $(this).attr('size', $('option').length);
+    },
+    function() {
+        $(this).attr('size', 1);
+    });
+});
+
+</script>
+  
+</body>
+</html>
